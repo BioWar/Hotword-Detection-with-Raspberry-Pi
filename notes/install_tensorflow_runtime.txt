@@ -1,0 +1,3 @@
+Link to the guide:
+
+https://www.tensorflow.org/lite/guide/python

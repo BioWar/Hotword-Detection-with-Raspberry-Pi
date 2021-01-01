@@ -1,0 +1,14 @@
+If during an audio test there is an error which tells you about unavailability of any audio output devices
+you should check if your current user is added in "audio" group by command:
+
+$ groups
+
+or 
+
+$ id
+
+If there is no "audio" then you should add yourself:
+
+$ sudo usermod -a -G audio admin
+
+And login again into your account. After that you should be able to play audio with python script.

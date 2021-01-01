@@ -1,0 +1,12 @@
+To control microphone option and audio output you should use:
+
+$ alsamixer
+
+"librosa" requires audio ONLY in floating point variant, and "pyaudio" supports it. However, I was
+unable to record audio in format=pyaudio.paFloat32 (audio was more similar to white noise rather than speech), only in Int formats.
+To fix this issue I followed the next guide:
+
+https://iotbytes.wordpress.com/connect-configure-and-test-usb-microphone-and-speaker-with-raspberry-pi/
+
+After that, I kinda was solved. If after the audio configuration main.py could not predict
+the trigger word you should probably tweak parameters on your laptop/PC.

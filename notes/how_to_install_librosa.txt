@@ -1,0 +1,12 @@
+During the python environment setup I experienced issues with an absence of the "llvmlite" for successful
+"librosa" installation (basically the heart of the project). So here is the link to the guide that 
+worked out pretty well for me, and an additional step in the end.
+
+https://solarianprogrammer.com/2018/04/22/raspberry-pi-raspbian-install-clang-compile-cpp-17-programs/
+
+I chose llvm 10.0.1 and librosa works fine with it, but before "pip install librosa" you should
+make this variable in shell environment.
+
+$ echo 'export LLVM_CONFIG=/usr/local/clang_10.0.1/bin/llvm-config' >> ~/.bashrc
+
+And that's all, you are free to start librosa installation.
